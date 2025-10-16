@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENTS PROFILE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lucida Handwriting", cursive;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .profile-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 340px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-decoration: underline;
+      letter-spacing: 1px;
+    }
+
+    .details {
+      font-size: 16px;
+      color: #333;
+      text-align: left;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .theme-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .theme-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .white { background-color: #ffffff; border: 1px solid #ccc; }
+    .pink { background-color: #f8bbd0; }
+    .blue { background-color: #90caf9; }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>STUDENTS PROFILE</h1>
+
+    <div class="details">
+      <p><strong>STUDENT NAME:</strong> Glory Susanna</p>
+      <p><strong>SECTION:</strong> 109</p>
+      <p><strong>ROLL NUMBER:</strong> 2400031939</p>
+    </div>
+
+    <p><strong>Select Theme:</strong></p>
+    <div class="theme-buttons">
+      <button class="theme-btn white" data-color="#ffffff"></button>
+      <button class="theme-btn pink" data-color="#f8bbd0"></button>
+      <button class="theme-btn blue" data-color="#90caf9"></button>
+    </div>
+
+    <footer>Theme preference is saved automatically 💫</footer>
+  </div>
+
+  <script>
+    const themeButtons = document.querySelectorAll(".theme-btn");
+    const savedTheme = localStorage.getItem("studentThemeColor");
+
+    // Apply saved theme on load
+    if (savedTheme) {
+      document.body.style.backgroundColor = savedTheme;
+    } else {
+      document.body.style.backgroundColor = "#ffffff"; // default white
+    }
+
+    // Change theme on click
+    themeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const color = btn.getAttribute("data-color");
+        document.body.style.backgroundColor = color;
+        localStorage.setItem("studentThemeColor", color);
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDENTS PROFILE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lucida Handwriting", cursive;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .profile-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      width: 340px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      text-decoration: underline;
+      letter-spacing: 1px;
+    }
+
+    .details {
+      font-size: 16px;
+      color: #333;
+      text-align: left;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .theme-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .theme-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .white { background-color: #ffffff; border: 1px solid #ccc; }
+    .pink { background-color: #f8bbd0; }
+    .blue { background-color: #90caf9; }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>STUDENTS PROFILE</h1>
+
+    <div class="details">
+      <p><strong>STUDENT NAME:</strong> Glory Susanna</p>
+      <p><strong>SECTION:</strong> 109</p>
+      <p><strong>ROLL NUMBER:</strong> 2400031939</p>
+    </div>
+
+    <p><strong>Select Theme:</strong></p>
+    <div class="theme-buttons">
+      <button class="theme-btn white" data-color="#ffffff"></button>
+      <button class="theme-btn pink" data-color="#f8bbd0"></button>
+      <button class="theme-btn blue" data-color="#90caf9"></button>
+    </div>
+
+    <footer>Theme preference is saved automatically 💫</footer>
+  </div>
+
+  <script>
+    const themeButtons = document.querySelectorAll(".theme-btn");
+    const savedTheme = localStorage.getItem("studentThemeColor");
+
+    // Apply saved theme on load
+    if (savedTheme) {
+      document.body.style.backgroundColor = savedTheme;
+    } else {
+      document.body.style.backgroundColor = "#ffffff"; // default white
+    }
+
+    // Change theme on click
+    themeButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const color = btn.getAttribute("data-color");
+        document.body.style.backgroundColor = color;
+        localStorage.setItem("studentThemeColor", color);
+      });
+    });
+  </script>
+</body>
+</html>
+
